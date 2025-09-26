@@ -1,0 +1,14 @@
+File transfer:
+100000000 bytes - 14.365s
+90000000 bytes  - 12.505s
+80000000 bytes  - 11.297s
+70000000 bytes  - 10.072s
+60000000 bytes  -  8.102s
+50000000 bytes  -  7.120s
+
+The relationship between size and speed is linear.
+
+A large file of 100MB takes 14.365 seconds to compute. The biggest bottleneck
+in the code is the loop that copies the data over which has a max buffer 
+capacity of m. Since by default m is 256b, this means a large file takes 
+nearly 40,000 iterations to transfer the file (unless the m is changed).
