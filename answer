@@ -6,7 +6,7 @@ File transfer:
 60000000 bytes  -  8.102s
 50000000 bytes  -  7.120s
 
-The relationship between size and speed is linear.
+The relationship between size and speed is linear. See graph.pdf for visual representation.
 
 A large file of 100MB takes 14.365 seconds to compute. The biggest bottleneck
 in the code is the loop that copies the data over which has a max buffer 
